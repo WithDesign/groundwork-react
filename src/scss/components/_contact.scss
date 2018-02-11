@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  background: color(greyscale, white);
+  background: color(greyscale, 'white');
   min-height: 100vh;
   @include gridlines(150px, 150px, 2px, 0px);
 

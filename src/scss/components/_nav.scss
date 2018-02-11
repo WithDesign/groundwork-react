@@ -18,7 +18,7 @@
     padding: 20px 10px 11px;
     font-family: font-family(heading);
     text-decoration: none;
-    color: color(greyscale, white);
+    color: color(greyscale, 'white');
     font-weight: 700;
     letter-spacing: 2px;
     position: relative;
@@ -40,13 +40,13 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      background-color: color(greyscale, white);
+      background-color: color(greyscale, 'white');
       @include transform(translateX(-101%));
       @include transition(all 0.5s ease-in-out);
     }
 
     &:hover {
-      color: color(greyscale, black);
+      color: color(greyscale, 'black');
 
       &:before {
          @include transform(translateX(0%));

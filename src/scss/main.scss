@@ -1,6 +1,7 @@
 
-@import 'config';
-@import '../../node_modules/groundwork-ui/scss/main';
-@import 'infrastructure';
+
+@import './../../node_modules/groundwork-ui/scss/api'; // Includes api, utilities, and config
+@import 'config'; // Main config
+@import './../../node_modules/groundwork-ui/scss/main'; // Pulls in fraework to compile to correct settings
 @import 'components/components';
 @import 'pages/pages';

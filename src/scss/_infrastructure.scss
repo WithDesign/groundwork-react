@@ -1,12 +1,10 @@
-@include normalize();
-
 ::-moz-selection {
    color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8);
+  background: rgba(color(greyscale, 'grey'), 0.8);
 }
 ::selection {
   color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8);
+  background: rgba(color(greyscale, 'grey'), 0.8);
 }
 
 
@@ -30,8 +28,8 @@
 
   ::-webkit-scrollbar-thumb {
     border: 0 {
-      right: 1px solid color(greyscale, white);
-      left: 1px solid color(greyscale, white);
+      right: 1px solid color(greyscale, 'white');
+      left: 1px solid color(greyscale, 'white');
     }
     border-radius: 0;
     background: transparent ;
@@ -43,7 +41,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    border: 0 none color(greyscale, white);
+    border: 0 none color(greyscale, 'white');
     border-radius: 50;
     background: transparent;
   }
@@ -90,7 +88,7 @@
 
 .app-loading {
   height: 100vh;
-  background-color: color(greyscale, black);
+  background-color: color(greyscale, 'black');
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
@@ -116,7 +114,7 @@
 
     span {
       font-family: font-family(brand);
-      color: color(greyscale, white);
+      color: color(greyscale, 'white');
       text-transform: uppercase;
     }
   }
@@ -148,19 +146,7 @@ hr {
 }
 
 .blank {
-  background-color: color(greyscale, white);
-}
-
-// Images
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-// Helpers
-.transition {
-  @include transition(all 0.3s ease-in-out);
+  background-color: color(greyscale, 'white');
 }
 
 .faded {
@@ -197,38 +183,6 @@ hr {
   font-family: inherit;
 }
 
-// Createing classes
-@if infra-value(text) != false {
-  @include infra-text();
-}
-
-@if infra-value(lists) != false {
-  @include infra-lists();
-}
-
-@if infra-value(headings) != false {
-  @include infra-headings();
-}
-
-@if infra-value(position) != false {
-  @include infra-position();
-}
-
-// Vars for setup of grid system
-$col-size: map-keys(get('grid, setup, breakpoints')) !default;
-$grid-columns: get('grid, grid-columns');
-
-@include flexbox-grid($col-size, $grid-columns);
-
-// Checks to see if you want to import
-@if infra-value(box-modal) != false {
-  @include infra-box-modal(infra-value(box-modal), infra-value(box-modal-values));
-}
-
-@if infra-value(display) != false {
-  @include infra-display(infra-value(display));
-}
-
 .main-content {
   padding-left: 0;
   padding-right: 0;
@@ -239,7 +193,7 @@ div[style^="opacity"] {
 }
 
 .bg-white {
-  background-color: color(greyscale, white);
+  background-color: color(greyscale, 'white');
 }
 
 blockquote {
@@ -283,7 +237,7 @@ blockquote {
 
 .toggle {
   background-color: color(brand, danger);
-  color: color(greyscale, white);
+  color: color(greyscale, 'white');
   outline: 0;
   border: 3px solid color(brand, danger) {
     radius: 4px;
